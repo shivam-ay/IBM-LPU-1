@@ -3436,3 +3436,72 @@ Caused by: java.net.SocketException: Connection reset
 	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1409)
 	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1022)
 	... 21 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.282
+!MESSAGE Preparing classpath changed notification JPA
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.282
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.284
+!MESSAGE classpath=5 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.284
+!MESSAGE buffering callback sts4.classpath.oiXgUJel JPA false 5
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.285
+!MESSAGE Preparing classpath changed notification JPI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.286
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.287
+!MESSAGE buffering callback sts4.classpath.oiXgUJel JPI true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.287
+!MESSAGE executing callback sts4.classpath.oiXgUJel 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:23.298
+!MESSAGE executing callback sts4.classpath.oiXgUJel SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:27.075
+!MESSAGE Preparing classpath changed notification JPA
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:27.076
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:27.082
+!MESSAGE classpath=41 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:27.085
+!MESSAGE buffering callback sts4.classpath.oiXgUJel JPA false 41
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:27.085
+!MESSAGE executing callback sts4.classpath.oiXgUJel 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-16 13:54:29.087
+!MESSAGE executing callback sts4.classpath.oiXgUJel FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-04-16 13:54:29.087
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1957)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:197)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:168)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-16 13:54:29.195
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1957)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.springframework.tooling.boot.ls.jdt.LSPTextHover.getHoverInfo(LSPTextHover.java:109)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

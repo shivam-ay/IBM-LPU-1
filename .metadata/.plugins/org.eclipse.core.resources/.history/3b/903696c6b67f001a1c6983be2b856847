@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.example.demo.config.AppConfig;
+import com.example.demo.entity.Employee;
+import com.example.demo.service.EmployeeService;
+import com.example.demo.service.EmployeeServiceImpl;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+    	//ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    	EmployeeService service = context.getBean("service",EmployeeServiceImpl.class);
+    	Employee e = service.createEmployee(new Employee("john",100));
+    	System.out.println(e);
+    }
+}

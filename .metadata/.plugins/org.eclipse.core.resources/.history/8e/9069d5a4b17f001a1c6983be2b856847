@@ -1,0 +1,9 @@
+package com.example.demo.EmployeeDao;
+
+import com.example.demo.entity.Employee;
+
+public interface EmployeeDao 
+{
+	public Employee createEmployee(Employee employee);
+	public void updateEmployee(Employee employee);
+}

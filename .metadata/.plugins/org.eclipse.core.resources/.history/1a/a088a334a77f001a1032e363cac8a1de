@@ -1,0 +1,43 @@
+package com.example.demo.EmployeeDao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.entity.Employee;
+
+@Repository("dao")
+public class EmployeeDaoImpl implements EmployeeDao
+{
+	private SessionFactory sessionFactory;
+	private EntityManagerFactory factory;
+	private EntityManager entityManager;
+	
+	@Autowired
+	public EmployeeDaoImpl(SessionFactory sessionFactory)
+	{
+		super();
+		this.sessionFactory = sessionFactory;
+	}
+	@PostConstruct
+	public void init()
+	{
+		factory = sessionFactory.unwrap(SessionFactory.class);
+	}
+	@Override
+	public Employee createEmployee(Employee employee) 
+	{
+		
+		return null;
+	}
+
+	@Override
+	public void updateEmployee(Employee employee) 
+	{
+		
+	}
+
+}

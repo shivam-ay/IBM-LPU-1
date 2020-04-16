@@ -1,0 +1,28 @@
+package com.example.demo.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Version;
+
+@Entity
+@Table(name = "EMPLOYEE")
+public class Employee
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int employeeId;
+	@Version
+	private int version;
+	private String name;
+	private int salary;
+	
+	public Employee()
+	{
+		super();
+	}
+	
+	
+}

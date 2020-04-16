@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.example.demo.EmployeeDao.EmployeeDaoImpl;
+import com.example.demo.entity.Employee;
+import com.example.demo.service.EmployeeService;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    	EmployeeService service = context.getBean("serve",EmployeeServiceImpl.class);
+    	Employee e = dao
+    }
+}

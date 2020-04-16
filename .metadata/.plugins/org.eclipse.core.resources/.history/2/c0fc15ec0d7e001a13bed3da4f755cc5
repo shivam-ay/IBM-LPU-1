@@ -1,0 +1,7 @@
+package com.example.dao;
+
+
+public interface ImageDao
+{
+	public void createImage(String imageID,String imageUrl);
+}

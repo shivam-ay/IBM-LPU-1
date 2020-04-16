@@ -1,0 +1,8 @@
+package com.example.config;
+
+@Component
+@ComponentScan("com.example")
+public class AppConfig 
+{
+
+}

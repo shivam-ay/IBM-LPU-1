@@ -1,0 +1,18 @@
+package com.example.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.example.bean.Image;
+
+@Repository("imagedaoimpl")
+public class ImageDaoImpl implements ImageDao
+{
+
+	@Override
+	public void createImage(Image image)
+	{
+		String sql = "insert into images(imageid,imageurl) values('"+image.getImageID()+""+"'"+image.getImageURL()+")";
+		System.out.println("created");
+	}
+	
+}

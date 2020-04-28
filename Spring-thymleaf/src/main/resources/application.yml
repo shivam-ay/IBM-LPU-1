@@ -1,0 +1,8 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Spring-Thymleal
+  h2:
+    console:
+      enabled: true
